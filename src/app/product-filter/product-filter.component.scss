@@ -1,0 +1,6 @@
+input {
+  &:focus {
+    border: 1px solid blue;
+    outline: none;
+  }
+}

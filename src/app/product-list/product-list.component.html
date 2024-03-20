@@ -1,6 +1,11 @@
-
 <div>
-    <div>Modify me to show all products</div> 
-    <h2>{{ products[0].name }}</h2>
-    <p>Price: {{ products[0].price }}</p>
+  <div *ngFor="let product of products">
+    <h2>{{ product.name }}</h2>
+    <p>Price: {{ product.price }}</p>
+  </div>
+  <app-product-filter (min)="showMin($event)" (max)="showMax($event)"></app-product-filter>
+  <div *ngFor="let product of filteredList">
+    <h2>{{ product.name }}</h2>
+    <p>Price: {{ product.price }}</p>
+  </div>
 </div>
